@@ -208,10 +208,7 @@ object SplitViewForm: TSplitViewForm
     Width = 200
     Height = 383
     Color = clBlack
-    DoubleBuffered = True
     OpenedWidth = 200
-    ParentBackground = False
-    ParentDoubleBuffered = False
     Placement = svpLeft
     TabOrder = 2
     OnClosed = SVClosed
@@ -220,9 +217,10 @@ object SplitViewForm: TSplitViewForm
     OnOpening = SVOpening
     object catMenuItems: TCategoryButtons
       Left = 0
-      Top = -20
-      Width = 194
-      Height = 177
+      Top = 0
+      Width = 200
+      Height = 383
+      Align = alClient
       BorderStyle = bsNone
       ButtonFlow = cbfVertical
       ButtonHeight = 40
@@ -230,7 +228,8 @@ object SplitViewForm: TSplitViewForm
       ButtonOptions = [boFullSize, boShowCaptions, boCaptionOnlyBorder]
       Categories = <
         item
-          Color = clNone
+          Caption = 'Gruppo 1'
+          Color = clInfoBk
           Collapsed = False
           Items = <
             item
@@ -242,6 +241,23 @@ object SplitViewForm: TSplitViewForm
             item
               Action = actPower
             end>
+        end
+        item
+          Caption = 'Categoria 2'
+          Color = clNone
+          Collapsed = False
+          Items = <
+            item
+              Caption = 'Uno'
+            end
+            item
+              Caption = 'Due'
+            end
+            item
+              Caption = 'Tre'
+              ImageIndex = 3
+            end>
+          TextColor = clCream
         end>
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -263,7 +279,7 @@ object SplitViewForm: TSplitViewForm
     Left = 80
     Top = 316
     Bitmap = {
-      494C010104008000940020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
+      494C010104008000040020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000004000000001002000000000000080
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
